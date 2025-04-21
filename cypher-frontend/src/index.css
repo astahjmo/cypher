@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%; /* Light gray */
+    --foreground: 215 25% 27%; /* Dark gray */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 215 25% 27%; /* Dark gray */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 215 25% 27%; /* Dark gray */
+
+    --primary: 215 91% 33%; /* Blue */
+    --primary-foreground: 210 40% 98%; /* Light gray */
+
+    --secondary: 215 14% 94%; /* Light gray */
+    --secondary-foreground: 215 25% 27%; /* Dark gray */
+
+    --muted: 215 14% 94%; /* Light gray */
+    --muted-foreground: 215 20% 65%; /* Medium gray */
+
+    --accent: 215 14% 94%; /* Light gray */
+    --accent-foreground: 215 25% 27%; /* Dark gray */
+
+    --destructive: 0 84% 60%; /* Red */
+    --destructive-foreground: 210 40% 98%; /* Light gray */
+
+    --border: 214 32% 91%; /* Light gray border */
+    --input: 214 32% 91%; /* Light gray input */
+    --ring: 215 91% 33%; /* Blue ring */
+
+    --radius: 0.5rem;
+
+    /* --- Light Theme Sidebar --- */
+    --sidebar-background: 215 14% 94%; /* Light gray background */
+    --sidebar-foreground: 215 25% 27%; /* Dark gray text */
+    --sidebar-primary: 215 91% 33%; /* Blue for active item */
+    --sidebar-primary-foreground: 210 40% 98%; /* Light text on active item */
+    --sidebar-accent: 214 32% 91%; /* Slightly darker gray for hover */
+    --sidebar-accent-foreground: 215 25% 27%; /* Dark gray text on hover */
+    --sidebar-border: 214 32% 88%; /* Slightly darker border */
+    --sidebar-ring: 215 91% 33%; /* Blue ring */
+  }
+
+  .dark {
+    --background: 215 55% 10%; /* Dark blue/black */
+    --foreground: 210 40% 98%; /* Light gray */
+
+    --card: 215 50% 13%; /* Darker blue/black */
+    --card-foreground: 210 40% 98%; /* Light gray */
+
+    --popover: 215 50% 13%; /* Darker blue/black */
+    --popover-foreground: 210 40% 98%; /* Light gray */
+
+    --primary: 215 91% 33%; /* Blue */
+    --primary-foreground: 210 40% 98%; /* Light gray */
+
+    --secondary: 215 45% 23%; /* Dark blue */
+    --secondary-foreground: 210 40% 98%; /* Light gray */
+
+    --muted: 215 45% 23%; /* Dark blue */
+    --muted-foreground: 215 20% 65%; /* Medium gray */
+
+    /* Use a brighter accent for dark mode */
+    --accent: 215 45% 23%; /* Dark blue */
+    --accent-foreground: 210 40% 98%; /* Light gray */
+
+    --destructive: 0 62% 30%; /* Darker red */
+    --destructive-foreground: 210 40% 98%; /* Light gray */
+
+    --border: 215 45% 23%; /* Dark blue border */
+    --input: 215 45% 23%; /* Dark blue input */
+    --ring: 190 95% 39%; /* Cyan ring */
+
+    /* --- Dark Theme Sidebar --- */
+    /* These were already defined correctly in the original :root, moving them here */
+    --sidebar-background: 215 55% 18%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 215 91% 33%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 215 45% 23%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 45% 23%;
+    --sidebar-ring: 190 95% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Add font smoothing for better readability */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Keep background patterns */
+.pipeline-pattern-bg {
+  background-color: hsla(215, 91%, 95%, 1);
+  background-image:
+    radial-gradient(at 10% 20%, hsla(215, 98%, 61%, 0.2) 0px, transparent 50%),
+    radial-gradient(at 90% 80%, hsla(190, 95%, 39%, 0.1) 0px, transparent 50%);
+}
+
+.dark .pipeline-pattern-bg {
+  background-color: hsla(215, 55%, 10%, 1);
+  background-image:
+    radial-gradient(at 10% 20%, hsla(215, 98%, 61%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 90% 80%, hsla(190, 95%, 39%, 0.05) 0px, transparent 50%);
+}

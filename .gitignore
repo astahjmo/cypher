@@ -1,0 +1,69 @@
+# General OS / IDE files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Python / Poetry (cypher-backend)
+cypher-backend/__pycache__/
+cypher-backend/*.pyc
+*.pyc
+cypher-backend/.venv/
+cypher-backend/.pytest_cache/
+cypher-backend/.mypy_cache/
+cypher-backend/build/
+cypher-backend/dist/
+cypher-backend/*.egg-info/
+cypher-backend/.env
+
+# Node.js / Bun (Applied within subdirectories like cypher-frontend)
+**/node_modules/
+**/dist/
+**/build/
+**/.env*
+**/*.local
+**/.output/
+**/.nitro/
+**/.nuxt/
+**/coverage/
+**/.eslintcache
+bun.lockb
+package-lock.json
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+**/logs/
+**/*.log
+
+# Go (cypher-backend-go)
+# Ignoring the entire directory as it seems like an experiment/alternative
+cypher-backend-go/
+
+# Example App (fastapi-example-app)
+# Ignoring the entire directory as it seems like an example
+fastapi-example-app/
+
+# Mise
+.mise/
+
+# General Build / Temp / Logs (Redundant entries removed if covered above)
+temp/
+tmp/
+*.env # Keep general .env ignore
+
+# Virtual environment folders (general)
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Cache folders
+.cache/
