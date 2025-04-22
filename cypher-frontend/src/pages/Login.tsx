@@ -70,7 +70,7 @@ export default function Login() {
               />
             </svg>
           </div>
-          <h1 className="text-3xl font-bold">Pipeline Nexus</h1>
+          <h1 className="text-3xl font-bold">Cypher</h1>
           <p className="text-muted-foreground mt-2">Modern CI/CD pipeline orchestration platform</p>
         </div>
 
@@ -137,7 +137,7 @@ export default function Login() {
         </div>
 
         <div className="mt-8 text-center text-sm text-muted-foreground">
-          <p>By continuing, you agree to Pipeline Nexus' Terms of Service and Privacy Policy.</p>
+          <p>By continuing, you agree to Cypher's Terms of Service and Privacy Policy.</p>
         </div>
       </div>
 
